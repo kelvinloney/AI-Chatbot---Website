@@ -1,0 +1,963 @@
+/************************************************/
+
+/** GENERAL **/
+
+/************************************************/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #faf9f5;
+}
+
+p {
+  font-family: Roboto;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: "DM Serif Display", serif;
+  color: #29261b;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: "DM Serif Display", serif;
+  font-weight: lighter;
+  color: #29261b;
+  font-size: 1rem;
+}
+
+hr {
+  opacity: 0.33;
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-resize {
+  height: auto;
+  max-width: 75%;
+}
+
+.custom-spacing {
+  padding-top: 5px;
+}
+
+/************************************************/
+
+/** HEADER **/
+
+/************************************************/
+
+a {
+  text-decoration: none;
+}
+
+.header-container {
+  background-color: #faf9f5;
+  font-size: 0.9rem;
+  font-family: Roboto, sans-serif;
+  height: 70px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-family: "DM Serif Display", serif;
+  color: #29261b;
+}
+
+.logo-highlight {
+  color: #d97757;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 87.5%;
+  margin: auto;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.header-container .navbar {
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.header-container .navbar ul li {
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.link {
+  font-family: Roboto, sans-serif;
+  color: #29261b;
+  font-weight: lighter;
+}
+
+.link:hover {
+  color: darkslategray;
+}
+
+.custom-background {
+  color: #fff;
+  background-color: #bc5c39;
+  font-weight: medium;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.custom-background:hover {
+  color: #fff;
+  background-color: #d97757;
+}
+
+/************************************************/
+
+/** LEFT AND RIGHT HERO COLUMNS **/
+
+/************************************************/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.left-column {
+  background-color: #faf9f5;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.2rem;
+  height: 100%;
+  width: 87.5%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+.right-column {
+  background-color: #f0eee6;
+  border-radius: 15px;
+  height: 100%;
+  width: 87.5%;
+}
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .column {
+    flex: 100%;
+  }
+}
+
+.hero-right {
+  width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.custom-line-height {
+  line-height: 20px;
+}
+
+.google-container {
+  background-color: #faf9f5;
+  border: 1px solid #faf9f5;
+  border-radius: 25px;
+  font-size: 1rem;
+  height: 100%;
+  width: 75%;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+  padding: 20px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.icon-text {
+  display: inline-block;
+  margin: 0 auto;
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width: 95%;
+  box-sizing: border-box;
+}
+
+.continue-google-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.continue-google-text::before {
+  content: "";
+  background: url("./img/google-icon.png") no-repeat center center;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.google-or-text {
+  font-family: Roboto, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 325;
+  text-align: center;
+  color: #29261b;
+}
+
+#email,
+#submit {
+  font-family: Roboto, sans-serif;
+  font-weight: medium;
+  color: gray;
+  text-align: left;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 95%;
+  box-sizing: border-box;
+}
+
+#submit {
+  background-color: #c05f3c;
+  color: #fff;
+  border: 1px solid #c05f3c;
+  text-align: center;
+}
+
+.learn-more-text i {
+  flex: 0;
+  margin-left: auto;
+}
+
+.policy {
+  font-family: Roboto, sans-serif;
+  font-weight: medium;
+  font-size: 0.8rem;
+  color: #29261b;
+}
+
+.terms-policy-underline {
+  text-decoration: underline;
+}
+
+/************************************************/
+
+/** MEET TUTOR.AI **/
+
+/************************************************/
+
+.meet-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  width: 50%;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.95rem;
+}
+
+.meet-description {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.2rem;
+}
+
+.meet-help-container {
+  background-color: #faf9f5;
+  border: 1px solid #faf9f5;
+  border-radius: 25px;
+  font-size: 1rem;
+  height: 25%;
+  width: 75%;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; /* Space between left and right */
+}
+
+.flex-meet {
+  flex: 1;
+  display: flex; /* Use flexbox to align items */
+  justify-content: space-around; /* Align left and right on the same line */
+  align-items: center; /* Center items vertically */
+}
+
+.meet-help {
+  font-family: Roboto, sans-serif;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  color: #29261b;
+  flex: 1;
+  margin: 0 auto;
+  text-align: left; /* Align content to the left */
+}
+
+.start-chat {
+  background-color: #f0eee6;
+  border: 1px solid #faf9f5;
+  border-radius: 25px;
+  height: 75%;
+  width: 25%;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+  padding: 5px;
+  margin-left: auto; /* Push to the right */
+  flex: 1;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: #29261b;
+  text-align: center;
+}
+
+.try-these {
+  text-align: center;
+}
+
+.try-help-container {
+  background-color: #f0eee6;
+  border: 1px solid #faf9f5;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  height: 100%;
+  width: 75%;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Space between left and right */
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+}
+
+.flex-meet-left,
+.flex-meet-right {
+  flex: 1; /* Allow equal space for both */
+  text-align: center; /* Center text inside each */
+}
+
+/************************************************/
+
+/** FEATURES **/
+
+/************************************************/
+
+.features-heading,
+.plans-heading,
+.embed-heading,
+.faq-heading {
+  font-family: "DM Serif Display", serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #29261b;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.faq-heading {
+  padding-top: 150px;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+}
+
+.features-container .features-column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.features-container .features-column i,
+.features-container .features-column h3,
+.features-container .features-column p {
+  display: block;
+  margin: 0 auto;
+  text-align: center; /* Center text inside each column */
+}
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .features-container .features-column {
+    flex: 100%;
+  }
+}
+
+/************************************************/
+
+/** EXPLORE PLANS **/
+
+/************************************************/
+
+.plans-container {
+  background-color: #fff;
+  border: 1px solid #faf9f5;
+  border-radius: 25px;
+  font-size: 1rem;
+  height: 100%;
+  width: 75%;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+    rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+    rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+    rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+    rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+    rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+    rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+  padding: 20px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.plan-text {
+  display: flex;
+  align-items: first baseline;
+  justify-content: left;
+}
+
+.plan-text::before {
+  content: "\f058"; /* Unicode for Font Awesome's check-circle icon */
+  font-family: "Font Awesome 5 Free"; /* Ensure Font Awesome is loaded */
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.bottom-plan-text {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/** Flexbox layout for Explore plans **/
+.wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-left: 50px;
+  margin-right: 50px;
+  align-content: center;
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin: 0 9px;
+}
+
+.col {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/************************************************/
+
+/** EMBED TUTOR.AI **/
+
+/************************************************/
+
+.embed-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.column-container {
+  flex: 1;
+}
+
+.embed-left {
+  height: 100%;
+  width: 100%;
+  padding: 100px;
+  margin-left: 75px;
+}
+
+.embed-right {
+  height: 100%;
+  width: 100%;
+}
+
+.embed-img {
+  width: 60%;
+  height: auto;
+  border-top-left-radius: 80px 80px;
+  border: #f0eee6 5px double;
+  background-clip: content-box;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.embed-button-container {
+  display: flex;
+  gap: 10px;
+}
+
+#try,
+#api {
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+#try {
+  background-color: #29261b;
+  color: #faf9f5;
+  border: 2px solid #29261b;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+#api {
+  background-color: #faf9f5;
+  color: #29261b;
+  border: 2px solid #29261b;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: lighter;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+/************************************************/
+
+/** FREQUENTLY ASKED QUESTIONS **/
+
+/************************************************/
+
+/** Accordion styles **/
+
+/* Buttons styles to open and close the accordion panel */
+.accordion {
+  background-color: #faf9f5;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 63%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-bottom: 2.5px solid #f0eee6;
+  display: block;
+  margin: 0 auto;
+  font-family: Roboto, sans-serif;
+  font-weight: 250;
+  font-size: 1.1rem;
+}
+
+/* background color to the button if it is clicked on, and when you hover */
+.active,
+.accordion:hover {
+  background-color: #faf9f5;
+}
+
+/* Style accordion panel dropdown */
+.panel {
+  padding: 0 18px;
+  background-color: #faf9f5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  text-align: left;
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+
+/** Add accordion icons **/
+
+.accordion:after {
+  content: "\2795"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #bc5c39;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+  font-size: 13px;
+  color: #bc5c39;
+}
+
+/************************************************/
+
+/** FOOTER **/
+
+/************************************************/
+
+.footer-background {
+  background-color: #000;
+  max-height: 100%;
+  max-width: 100%;
+  padding: 25px;
+  margin-top: 100px;
+}
+
+/* Flexbox styles */
+.footer-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: left;
+  text-align: left;
+}
+
+.footer-row:first-child {
+  flex: 4 1 auto; /* Double the flex-grow value */
+  align-self: stretch;
+}
+
+.footer-row:not(:first-child) {
+  flex: 2 1 auto; /* Keep the other items as is */
+}
+
+/** Logo **/
+.logo-highlight-main {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  color: #faf9f5;
+  flex-grow: 2;
+}
+
+.footer-policy {
+  font-family: Roboto, sans-serif;
+  font-weight: medium;
+  font-size: 0.8rem;
+  color: darkgray;
+}
+
+.footer-link {
+  font-family: Roboto, sans-serif;
+  font-weight: medium;
+  font-size: 0.8rem;
+  color: darkgray;
+  text-decoration: underline;
+}
+
+.footer-li,
+.footer-li-link {
+  font-family: Roboto, sans-serif;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  color: #faf9f5;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+
+.footer-li-link:hover {
+  color: #d97757;
+}
+
+/************************************************/
+
+/** MEDIA QUERIES **/
+
+/************************************************/
+
+/** HEADER **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .container {
+    height: 100%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    position: initial;
+    top: 0;
+  }
+
+  .logo {
+    font-size: calc(1.6vw + 1.6vh);
+    float: left;
+  }
+
+  .custom-background {
+    font-size: calc(0.8vw + 0.8vh);
+  }
+
+  .link {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/** LEFT COLUMN **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .continue-google-text {
+    font-size: 0.8rem;
+  }
+}
+
+/** RIGHT COLUMN **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .right-column {
+    display: none;
+  }
+}
+
+/** MEET TUTOR.AI **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .meet-text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    width: 75%;
+  }
+
+  .responsive-resize-meet-text {
+    font-size: 1.8rem;
+  }
+
+  .meet-description {
+    font-size: calc(1.3vw + 1.3vh);
+  }
+
+  .try-these,
+  .try-help-container {
+    display: none;
+  }
+
+  .meet-help-container {
+    font-size: 0.8rem;
+    height: 10%;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .flex-meet-left,
+  .flex-meet-right {
+    width: 100%;
+    font-size: 0.4rem;
+    flex: 0 1 auto;
+  }
+
+  .start-chat {
+    height: 75%;
+    width: 60%;
+    padding: 5px;
+    margin-left: auto; /* Push to the right */
+    flex: 1;
+    font-size: 0.8rem;
+  }
+}
+
+/** FEATURES **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .features-container-none {
+    display: none;
+  }
+
+  .img-resize {
+    height: auto;
+    max-width: 50%;
+  }
+
+  .responsive-resize-features-text {
+    font-size: 1.3rem;
+  }
+
+  .features-heading {
+    font-size: calc(1.7vw + 1.7vh);
+  }
+}
+
+/** EXPLORE PLANS **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .row {
+    display: flex;
+    flex: 1 1 50%; /* Each row takes up 50% of the wrap */
+    justify-content: space-between;
+    margin: 5px; /* Space between columns */
+  }
+
+  .row:nth-child(1),
+  .row:nth-child(2) {
+    flex-basis: 100%; /* Ensure rows stack properly */
+  }
+
+  .row:nth-child(1) .col,
+  .row:nth-child(2) .col {
+    flex: 1 1 45%; /* Each column takes up 45% of the row */
+    margin: 2.5%; /* Add spacing between columns */
+  }
+
+  .responsive-resize-plans-header {
+    font-size: calc(1.6vw + 1.6vh);
+  }
+
+  .responsive-resize-plans-paragraph {
+    font-size: calc(1.2vw + 1.2vh);
+  }
+
+  .plan-text {
+    font-size: calc(1vw + 1vh);
+  }
+
+  .plans-heading {
+    font-size: calc(1.7vw + 1.7vh);
+  }
+}
+
+/** EMBED TUTOR.AI **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .embed-right,
+  .embed-img {
+    display: none;
+  }
+
+  .embed-left {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: calc(1vw + 1vh);
+  }
+
+  .embed-left p {
+    font-size: calc(1.2vw + 1.2vh);
+  }
+
+  .embed-heading {
+    font-size: calc(1.7vw + 1.7vh);
+    padding-bottom: 10px;
+  }
+
+  .embed-button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    margin: 0 auto;
+  }
+
+  #try,
+  #api {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .embed-container {
+    display: flex;
+  }
+
+  .column-container {
+    flex: 1;
+    padding: 0px;
+  }
+}
+
+/** FREQUENTLY ASKED QUESTIONS **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .accordion {
+    width: 85%;
+    font-size: calc(1vw + 1vh);
+  }
+
+  .accordion:after {
+    margin-left: 20px;
+  }
+
+  .panel p {
+    font-size: calc(1vw + 1vh);
+  }
+
+  .faq-heading {
+    font-size: calc(1.7vw + 1.7vh);
+  }
+}
+
+/** FOOTER **/
+
+@media screen and (min-width: 390px) and (max-width: 844px) and (orientation: portrait) {
+  .footer-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    text-align: left;
+  }
+}
